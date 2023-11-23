@@ -3,6 +3,19 @@ pipeline{
 
 stages{
 
-    stage('Bulid app'){
-     steps{
-         checkout scmGit(branches:[[name: '/main']],extension:[],userRemoteConfigs:[[url:
+    stage('Bulid app')
+    {
+     steps {
+         checkout scmGit(branches:[[name: '/main']],extension:[],userRemoteConfigs:[[url:'https://github.com/GauriVibhute/Dockerize.git']])
+     }
+}
+stage('Bulid docker image'){
+ steps{
+   script{
+   bat 'docker bulid -t jenkinsjavaapp .'
+}
+}
+}
+}
+}
+
