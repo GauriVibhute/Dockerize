@@ -1,1 +1,8 @@
+pipeline{
+    agent any
 
+stages{
+
+    stage('Bulid app'){
+     steps{
+         checkout scmGit(branches:[[name: '/main']],extension:[],userRemoteConfigs:[[url:
