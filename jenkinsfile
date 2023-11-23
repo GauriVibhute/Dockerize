@@ -6,7 +6,7 @@ stages{
     stage('Bulid app')
     {
      steps {
-         checkout scmGit(branches:[[name: '/main']],extension:[],userRemoteConfigs:[[url:'https://github.com/GauriVibhute/Dockerize.git']])
+         checkout scmGit(branches:[[name: '/main']], extension:[],userRemoteConfigs:[[url:'https://github.com/GauriVibhute/Dockerize.git']])
      }
 }
 stage('Bulid docker image'){
